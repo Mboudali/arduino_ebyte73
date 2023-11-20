@@ -1,0 +1,52 @@
+# nRF52833 variants
+###################
+
+Generic_nRF52833.name=Generic nRF52833
+
+Generic_nRF52833.upload.tool=sandeepmistry:openocd
+Generic_nRF52833.upload.target=nrf52
+Generic_nRF52833.upload.maximum_size=524288
+
+Generic_nRF52833.bootloader.tool=sandeepmistry:openocd
+
+Generic_nRF52833.build.mcu=cortex-m4
+Generic_nRF52833.build.f_cpu=64000000
+Generic_nRF52833.build.board=GENERIC
+Generic_nRF52833.build.core=nRF5
+Generic_nRF52833.build.variant=Generic
+Generic_nRF52833.build.variant_system_lib=
+Generic_nRF52833.build.extra_flags=-DNRF52833_XXAA
+Generic_nRF52833.build.float_flags=-mfloat-abi=hard -mfpu=fpv4-sp-d16
+Generic_nRF52833.build.ldscript=nrf52833_xxaa.ld
+
+Generic_nRF52833.menu.softdevice.none=None
+Generic_nRF52833.menu.softdevice.none.softdevice=none
+Generic_nRF52833.menu.softdevice.none.softdeviceversion=
+
+Generic_nRF52833.menu.softdevice.s113=S113
+Generic_nRF52833.menu.softdevice.s113.softdevice=s113
+Generic_nRF52833.menu.softdevice.s113.softdeviceversion=7.2.0
+Generic_nRF52833.menu.softdevice.s113.upload.maximum_size=409600
+Generic_nRF52833.menu.softdevice.s113.build.extra_flags=-DNRF52 -DS113
+Generic_nRF52833.menu.softdevice.s113.build.ldscript=armgcc_s113_nrf52833_xxaa.ld
+
+Generic_nRF52833.menu.softdevice.s132=S132
+Generic_nRF52833.menu.softdevice.s132.softdevice=s132
+Generic_nRF52833.menu.softdevice.s132.softdeviceversion=2.0.1
+Generic_nRF52833.menu.softdevice.s132.upload.maximum_size=409600
+Generic_nRF52833.menu.softdevice.s132.build.extra_flags=-DNRF52 -DS132 -DNRF51_S132
+Generic_nRF52833.menu.softdevice.s132.build.ldscript=armgcc_s132_nrf52832_xxaa.ld
+
+Generic_nRF52833.menu.softdevice.s140=S140
+Generic_nRF52833.menu.softdevice.s140.softdevice=s140
+Generic_nRF52833.menu.softdevice.s140.softdeviceversion=7.2.0
+Generic_nRF52833.menu.softdevice.s140.upload.maximum_size=409600
+Generic_nRF52833.menu.softdevice.s140.build.extra_flags=-DNRF52 -DS140
+Generic_nRF52833.menu.softdevice.s140.build.ldscript=armgcc_s140_nrf52833_xxaa.ld
+
+Generic_nRF52833.menu.lfclk.lfxo=Crystal Oscillator
+Generic_nRF52833.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+Generic_nRF52833.menu.lfclk.lfrc=RC Oscillator
+Generic_nRF52833.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+Generic_nRF52833.menu.lfclk.lfsynt=Synthesized
+Generic_nRF52833.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
